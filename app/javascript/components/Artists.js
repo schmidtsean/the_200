@@ -17,7 +17,7 @@ const Artists = ({ playlist, artists }) => {
           <a href={`/playlists/${id}/artists/${artist.id}/edit`}>Edit</a>
           <br />
           <a 
-            href={`/playlsits/${id}/artists/${artist.id}`}
+            href={`/playlists/${id}/artists/${artist.id}`}
             data-method="delete"
           >
             Delete
