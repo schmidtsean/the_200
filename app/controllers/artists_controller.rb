@@ -18,8 +18,8 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = @playlist.artists.new(topic_params)
-    if @artist
+    @artist = @playlist.artists.new(artist_params)
+    if @artist.save
       redirect_to playlist_artists_path(@playlist)
     else
       render component: 'ArtistNew', props: { playlist: @playlist, artist: @artist}
@@ -43,7 +43,7 @@ class ArtistsController < ApplicationController
 
   private
   def artist_params
-    params.require(:artists[:playlist_id])
+    params.require(:artist).permit(:name, :title)
   end
 
   def set_playlist
