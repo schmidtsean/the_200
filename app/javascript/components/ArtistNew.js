@@ -19,6 +19,7 @@ const ArtistNew = ({ playlist, artist}) => {
         <textarea
           placeholder="body"
           defaultValue={defaultBody}
+          type="text"
           name="artist[body]"
         />
         <button type="submit">Add Artist</button>
