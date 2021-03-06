@@ -4,7 +4,7 @@ const Artists = ({ playlist, artists }) => {
   const { name , id } = playlist 
   return(
     <>
-      <h1>Artists from {name} sub</h1>
+      <h1>Artists from {name} playlist</h1>
       <a href={`/playlists/${id}/artists/new`}>New Artist</a>
       <br />
       <a href={`/playlists/${id}`}>Back to {name}</a>
