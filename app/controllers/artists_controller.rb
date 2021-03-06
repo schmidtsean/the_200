@@ -24,7 +24,7 @@ class ArtistsController < ApplicationController
     else
       render component: 'ArtistNew', props: { playlist: @playlist, artist: @artist}
     end
-
+  end
   def edit
     render component: 'ArtistEdit', props: { playlist: @playlist, artist: @artist}
   end
@@ -35,7 +35,7 @@ class ArtistsController < ApplicationController
     else
       render component: 'ArtistEdit', props: { playlist: @playlist, artist: @artist }
     end
-
+  end
   def destroy
     @artist.destroy
     redirect_to playlist_artists_path(@playlist)
