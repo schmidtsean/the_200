@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
- 
+  before_action :set_playlist
   before_action :set_artist
   before_action :set_song, only: [ :show, :edit, :update, :destroy ]
   
@@ -10,6 +10,7 @@ class SongsController < ApplicationController
   end
 
   def show
+    @song = Song.find(params[:id])
     render component: 'SongNew', props: { artist: @artist, song: @song}
   end
 
