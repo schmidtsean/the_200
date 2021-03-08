@@ -1,8 +1,8 @@
 import React from 'react';
-const url = "http://localhost:3000/subs/";
+
 const Artists = ({ playlist, artists }) => {
-  const { name , id } = artist 
-  return (
+  const { name , id } = playlist 
+  return(
     <>
       <h1>Artists from {name} playlist</h1>
       <a href={`/playlists/${id}/artists/new`}>New Artist</a>
