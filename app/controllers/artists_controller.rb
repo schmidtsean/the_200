@@ -4,12 +4,12 @@ class ArtistsController < ApplicationController
   
   
   def index
-    @artists = @playlist.artists
+    @artist = @playlist.artists
     render component: 'Artists', props: { playlist: @playlist, artists: @artists }
   end
 
   def show
-    render component: 'Aritist', props: { playlist: @playlist, artist: @artist}
+    render component: 'Artists', props: { playlist: @playlist, artist: @artist}
   end
 
   def new
