@@ -27,4 +27,4 @@ const Artists = ({ playlist, artists }) => {
   )
 }
 
-export default Artists;
+export default Artist;

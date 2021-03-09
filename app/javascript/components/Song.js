@@ -16,4 +16,4 @@ const Song = ({ artist, songs }) => {
   )
 }
 
-export default Songs;
+export default Song;

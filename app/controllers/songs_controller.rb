@@ -27,6 +27,7 @@ class SongsController < ApplicationController
       render component: 'SongNew', props: { artist: @artist, song: @song }
     end
   end
+  
   def edit
     render component: 'SongEdit', props: { artist: @artist, song: @song }
   end
@@ -38,6 +39,7 @@ class SongsController < ApplicationController
       render component: 'SongEdit', props: { artist: @artist, song: @song }
     end
   end
+  
   def destroy
     @song.destroy
     redirect_to artist_songs_path(@song)
