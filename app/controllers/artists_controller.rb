@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    render component: 'Aritist', props: { playlist: @playlist, artist: @artist}
+    render component: 'Artist', props: { playlist: @playlist, artist: @artist}
   end
 
   def new
