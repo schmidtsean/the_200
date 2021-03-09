@@ -1,4 +1,5 @@
-.import React from 'react';
+
+import React from 'react';
 
 const SongEdit = ({ artist, song }) => {
   const { name , id } = artist
