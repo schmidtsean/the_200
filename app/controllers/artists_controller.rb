@@ -82,8 +82,4 @@ class ArtistsController < ApplicationController
   def set_artist
     @artist = @playlist.artists.find(params[:id])
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> 393b601 (save)
