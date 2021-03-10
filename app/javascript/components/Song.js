@@ -1,7 +1,8 @@
 import React from 'react';
+const url = "http://localhost:3000/songs/";
 
-const Song = ({ songs }) => {
-  const { name, } = song;
+const Songs = ({ artist, song }) => {
+  const { name , id } = artist
  
   return (
     <>
@@ -11,7 +12,7 @@ const Song = ({ songs }) => {
       </p>
       <a href="/">back</a>
       <br />
-      <a href={`/artists/${id}/songs`}>Songs</a>
+      <a href={/artists/${id}/songs/${song.id}>Songs</a>
     </>
   )
 }

@@ -1,13 +1,15 @@
 class ArtistsController < ApplicationController
   before_action :set_playlist
   before_action :set_artist, only: [ :show, :edit, :update, :destroy ]
+  
   def index
     @artists = @playlist.artists
     render component: 'Artists', props: { playlist: @playlist, artists: @artists }
   end
+  
   def show
     @artist = Artist.all
-    render component: 'ArtistNew', props: { playlist: @playlist, artist: @artist}
+    render component: 'Artist', props: { playlist: @playlist, artist: @artist }
   end
   def new
     @artist = @playlist.artists.new

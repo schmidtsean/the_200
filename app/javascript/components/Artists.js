@@ -2,6 +2,8 @@ import React from 'react';
 
 const Artists = ({ playlist, artists }) => {
   const { name , id } = playlist 
+  const { name , body, id } = artists
+  
   return(
     <>
       <h1>Artists from {name} playlist</h1>

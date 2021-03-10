@@ -1,5 +1,7 @@
 import React from 'react';
 
+const url = "http://localhost:3000/artists/";
+
 const ArtistEdit = ({ playlist, artist }) => {
   const { name , id } = playlist 
   const defaultName = name ? name : "";
