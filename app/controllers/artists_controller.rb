@@ -6,7 +6,8 @@ class ArtistsController < ApplicationController
     render component: 'Artists', props: { playlist: @playlist, artists: @artists }
   end
   def show
-    render component: 'Artist', props: { playlist: @playlist, artist: @artist }
+    @artist = Artist.all
+    render component: 'ArtistNew', props: { playlist: @playlist, artist: @artist}
   end
   def new
     @artist = @playlist.artists.new

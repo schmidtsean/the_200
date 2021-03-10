@@ -8,7 +8,7 @@ const Artists = ({ playlist, artists }) => {
       <a href={`/playlists/${id}/artists/new`}>New Artist</a>
       <br />
       <a href={`/playlists/${id}`}>Back to {name}</a>
-      { artists.map((artist) => (
+      { Artists.map((artist) => (
         <div key={artist.id}>
           <h1>{artist.name}</h1> 
           <h3>{artist.body}</h3>

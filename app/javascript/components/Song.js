@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Song = ({ artist, songs }) => {
-  const { id, name, created_at } = song;
+const Song = ({ songs }) => {
+  const { name, } = song;
  
   return (
     <>
