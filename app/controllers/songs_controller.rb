@@ -11,7 +11,7 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
-    render component: 'SongNew', props: { artist: @artist, song: @song}
+    render component: 'SongNew', props: { artist: @artist, song: @song }
   end
 
   def new
