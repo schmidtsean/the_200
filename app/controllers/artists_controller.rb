@@ -31,10 +31,11 @@ class ArtistsController < ApplicationController
     end
   end
   def destroy
-    @artist.destroy
-    redirect_to playlist_artists_path(@playlist)
-  else
-    render component: 'ArtistNew', props: { playlist: @playlist, artist: @artist}
+    if @artist.destroy
+      redirect_to playlist_artists_path(@playlist)
+    else
+      render component: 'ArtistNew', props: { playlist: @playlist, artist: @artist}
+    end
   end
 
   def show
