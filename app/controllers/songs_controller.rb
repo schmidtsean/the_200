@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :set_playlist
+  
   before_action :set_artist
   before_action :set_song, only: [ :show, :edit, :update, :destroy ]
   
