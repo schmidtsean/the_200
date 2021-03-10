@@ -21,7 +21,7 @@ const Songs = ({ songs }) => {
             Delete
           </a>
       </div>
-      )}
+      ))}
     </>
   )
 }
