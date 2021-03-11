@@ -22,7 +22,7 @@ const SongEdit = ({ artist, song }) => {
           required
           type="text"
           defaultValue={defaultBody}
-          name="artist[body]"
+          name="song[body]"
         />
         <button type="Submit">Update</button>
         </form>
