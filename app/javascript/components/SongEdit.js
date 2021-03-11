@@ -3,7 +3,7 @@ import React from 'react';
 
 const SongEdit = ({ artist, song }) => {
   const { name , id } = artist
-  const defaultName = name ? name : "";
+  const defaultName = song.name ? song.name : "";
   const defaultBody = song.body ? song.body : "";
   return(
     <>
