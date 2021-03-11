@@ -8,9 +8,10 @@ class ArtistsController < ApplicationController
   end
   
   def show
-    @artist = Artist.all
+    @artist = Artist.find(params[:id])
     render component: 'Artist', props: { playlist: @playlist, artist: @artist }
   end
+  
   def new
     @artist = @playlist.artists.new
     render component: 'ArtistNew', props: { playlist: @playlist, artist: @artist }

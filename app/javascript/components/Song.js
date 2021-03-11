@@ -1,18 +1,21 @@
 import React from 'react';
-const url = "http://localhost:3000/songs/";
 
-const Songs = ({ artist, song }) => {
+
+const Song = ({ artist, song }) => {
   const { name , id } = artist
  
   return (
     <>
-      <h1>Song: {name}</h1>
+      <h1>Song: {song.name}</h1>
       <p>
-        created: {created_at}, id: {id}
+         id: {song.id}
+         <br />
+         <br />           
+         Body: {song.body}
       </p>
-      <a href="/">back</a>
+      <a href={`/artists/${id}/songs/`}>Back</a>
       <br />
-      <a href={/artists/${id}/songs/${song.id}>Songs</a>
+     
     </>
   )
 }

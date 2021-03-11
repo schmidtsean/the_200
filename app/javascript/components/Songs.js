@@ -1,13 +1,15 @@
 import React from 'react'; 
 
 
+
 const Songs = ({ artist, songs }) => {
-    const { name , id } = artist
+    const { name, id } = artist
+   
     
   return (
     <>
-      <h1>All the Songs</h1>
-      <a href={"/songs/new"}>Add Songs</a>
+      <h1>Songs</h1>
+      <a href={`/artists/${id}/songs/new`}>Add Songs</a>
       { songs.map((song) => (
       <div>
         <h3>{song.name}</h3>
@@ -20,6 +22,9 @@ const Songs = ({ artist, songs }) => {
           >
             Delete
           </a>
+          <br/>
+          <a href={`/`}>Home</a>
+        <br />
       </div>
       ))}
     </>

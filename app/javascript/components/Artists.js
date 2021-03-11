@@ -1,17 +1,18 @@
 import React from 'react';
 
 const Artists = ({ playlist, artists }) => {
-  const { name , id } = playlist 
-  const { name , body, id } = artists
+  const { name, id } = playlist
+
+ 
   
   return(
     <>
       <h1>Artists from {name} playlist</h1>
-      <a href={`/playlists/${id}/artists/new`}>New Artist</a>
+      <a href={`/playlists/${id}/artists/new/`}>New Artist</a>
       <br />
       <a href={`/playlists/${id}`}>Back to {name}</a>
-      { Artists.map((artist) => (
-        <div key={artist.id}>
+      { artists.map((artist) => (
+       <div>
           <h1>{artist.name}</h1> 
           <h3>{artist.body}</h3>
           <a href={`/playlists/${id}/artists/${artist.id}`}>Show</a>

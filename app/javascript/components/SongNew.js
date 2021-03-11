@@ -17,11 +17,14 @@ const SongNew = ({ artist, song}) => {
           type="text"
           name="song[name]"
         />
+        <br/>
+        <br/>
         <textarea
           placeholder="body"
           defaultValue={defaultBody}
           name="song[body]"
         />
+        <br/>
         <button type="submit">Add Song</button>
       </form>
     </>
